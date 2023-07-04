@@ -41,8 +41,8 @@ stages {
             subscriptionIdVariable: "${AZURE_SUBSCRIPTION_ID}",
             clientIdVariable: "${AZURE_CLIENT_ID}",
             clientSecretVariable: "${AZURE_CLIENT_SECRET}",
-            tenantIdVariable: "${AZURE_TENANT_ID}"
-        )]) {
+            tenantIdVariable: "${AZURE_TENANT_ID}")])
+        {
           sh """
             az login --service-principal --username \${AZURE_CLIENT_ID} --password \${AZURE_CLIENT_SECRET} --tenant \${AZURE_TENANT_ID}
             az account set -s \${AZURE_SUBSCRIPTION_ID}
