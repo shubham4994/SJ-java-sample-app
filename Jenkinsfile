@@ -22,9 +22,8 @@ node {
       def resourceGroup = 'SJ-reource'
       def webAppName = 'sj-javaapp'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'da863f92-0a7e-4198-b7bb-be20e7b9dbca', passwordVariable: 'J_S8Q~JNF7K-Bb-i6VPUcu1mshDiheJmA-em3ae6', usernameVariable: 'd2beb018-8f93-4e2c-bfd4-bbf9535e4ef8')]) {
-       sh '''
-          az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
+      withAzureServicePrincipal(credentialsId: 'da863f92-0a7e-4198-b7bb-be20e7b9dbca') {
+        sh '''
           az account set -s $AZURE_SUBSCRIPTION_ID
         '''
       }
