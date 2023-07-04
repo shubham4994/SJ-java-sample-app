@@ -25,7 +25,7 @@ node {
     // login Azure
     withCredentials([azureServicePrincipal(credentialsId: 'da863f92-0a7e-4198-b7bb-be20e7b9dbca', variable: 'AZURE_CREDENTIALS')]) {
       sh '''
-        az login --service-principal -u $AZURE_CREDENTIALS_USR -p $AZURE_CREDENTIALS_PSW --tenant $AZURE_CREDENTIALS_TENANT
+        az login --service-principal -u d2beb018-8f93-4e2c-bfd4-bbf9535e4ef8 -p J_S8Q~JNF7K-Bb-i6VPUcu1mshDiheJmA-em3ae6 --tenant 507fc407-e0b7-4432-be14-ffb107fb7e24
       '''
       // get publish settings
       def pubProfilesJson = sh script: "az webapp deployment list-publishing-profiles -g $resourceGroup -n $webAppName --query '[].{publishMethod:publishMethod, publishUrl:publishUrl, userName:userName, userPWD:userPWD}' -o json", returnStdout: true
