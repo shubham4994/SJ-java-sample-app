@@ -11,15 +11,15 @@ pipeline {
     agent any
 
     environment {
-        // AZURE_SUBSCRIPTION_ID = 'ec940544-e7ec-4f93-ade7-8e607a0b020b'
-        // AZURE_TENANT_ID = '507fc407-e0b7-4432-be14-ffb107fb7e24'
-        // AZURE_CREDENTIALS_ID = 'da863f92-0a7e-4198-b7bb-be20e7b9dbca'
-        // AZURE_CLIENT_SECRET = 'J_S8Q~JNF7K-Bb-i6VPUcu1mshDiheJmA-em3ae6'
-        // AZURE_CLIENT_ID = 'd2beb018-8f93-4e2c-bfd4-bbf9535e4ef8'
-        AZURE_SUBSCRIPTION_ID = credentials('AZURE_SUBSCRIPTION_ID')
-        AZURE_CLIENT_ID = credentials('AZURE_CLIENT_ID')
-        AZURE_CLIENT_SECRET = credentials('AZURE_CLIENT_SECRET')
-        AZURE_TENANT_ID = credentials('AZURE_TENANT_ID')
+        AZURE_SUBSCRIPTION_ID = 'ec940544-e7ec-4f93-ade7-8e607a0b020b'
+        AZURE_TENANT_ID = '507fc407-e0b7-4432-be14-ffb107fb7e24'
+        AZURE_CREDENTIALS_ID = 'da863f92-0a7e-4198-b7bb-be20e7b9dbca'
+        AZURE_CLIENT_SECRET = 'J_S8Q~JNF7K-Bb-i6VPUcu1mshDiheJmA-em3ae6'
+        AZURE_CLIENT_ID = 'd2beb018-8f93-4e2c-bfd4-bbf9535e4ef8'
+        // AZURE_SUBSCRIPTION_ID = credentials('AZURE_SUBSCRIPTION_ID')
+        // AZURE_CLIENT_ID = credentials('AZURE_CLIENT_ID')
+        // AZURE_CLIENT_SECRET = credentials('AZURE_CLIENT_SECRET')
+        // AZURE_TENANT_ID = credentials('AZURE_TENANT_ID')
 
     }
 
